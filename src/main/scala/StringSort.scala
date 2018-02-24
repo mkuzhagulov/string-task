@@ -13,7 +13,7 @@ class StringSort(val str: String) {
       for (i <- arrayOfWords if i.startsWith(k.toString)) yield i
     }
 
-    val interStr = (for(arr <- arrs) yield strBuilder(arr)).toArray.sorted
+    val interStr = (for(arr <- arrs) yield strBuilder(arr.sorted)).toArray.sorted
     if (!interStr.isEmpty) "[" + interStr.mkString(", ") + "]"
     else ""
   }
